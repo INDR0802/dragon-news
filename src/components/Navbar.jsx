@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       <div className="text-center my-5 space-y-1">
-        <h1 className="text-4xl">The Dragon News</h1>
+        <h1 className="text-5xl font-oldEnglish">The Dragon News</h1>
         <h1 className="text-md">Journalism Without Fear or Favour</h1>
         <h1 className="font-bold">{getDate()}</h1>
       </div>
