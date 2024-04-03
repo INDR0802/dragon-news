@@ -21,7 +21,7 @@ function getDate() {
 }
 console.log(getDate());
 
-const Header = () => {
+const Navbar = () => {
   return (
     <>
       <div className="text-center my-5 space-y-1">
@@ -33,4 +33,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
