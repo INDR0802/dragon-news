@@ -19,8 +19,6 @@ function getDate() {
   ];
   return `${date}-${months[month - 1]}-${year}`;
 }
-console.log(getDate());
-
 const Navbar = () => {
   return (
     <>
