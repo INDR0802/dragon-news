@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const LeftSide = () => {
-  let [catagory, setCatagory] = useState(null);
+  let [catagory, setCatagory] = useState([]);
   useEffect(() => {
     fetch("/data/categories.json")
       .then((res) => res.json())
@@ -9,9 +10,18 @@ const LeftSide = () => {
   }, []);
   console.log(catagory);
   return (
-    <div>
-      <h1>left</h1>
-    </div>
+    <>
+      <h1 className="text-xl font-bold mb-5">All Categoty</h1>
+      <ul className="menu bg-base-200 w-full rounded-box">
+        {catagory.map((item) => {
+          return (
+            <li key={item.id}>
+              <NavLink to={`/category/${item.id}`}>{item.name}</NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 };
 
