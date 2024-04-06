@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useContext } from "react";
+import { AuthContext } from "../Firebase/AuthProvider";
 
 const Heading = () => {
   let links = (
@@ -17,7 +18,8 @@ const Heading = () => {
     </div>
   );
 
-  let authInfo = useContext()
+  let authInfo = useContext(AuthContext);
+  let { user } = authInfo;
 
   return (
     <>
@@ -40,6 +42,7 @@ const Heading = () => {
                 />
               </svg>
             </div>
+            {user && <h1 className="btn bg-blue-300">{user.user.email}</h1>}
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
