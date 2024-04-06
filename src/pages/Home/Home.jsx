@@ -1,4 +1,3 @@
-import Heading from "../../components/Heading";
 import LeftSide from "../../layouts/LeftSide";
 import Middle from "../../layouts/Middle";
 import RightSide from "../../layouts/RightSide";
@@ -7,7 +6,6 @@ import ScrollNews from "./ScrollNews";
 const Home = () => {
   return (
     <>
-      <Heading />
       <ScrollNews />
       <div className="grid grid-cols-4 gap-4">
         <div>

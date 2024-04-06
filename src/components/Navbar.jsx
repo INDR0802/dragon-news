@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { AuthContext } from "../Firebase/AuthProvider";
+
 function getDate() {
   const today = new Date();
   const month = today.getMonth() + 1;
@@ -20,6 +23,7 @@ function getDate() {
   return `${date}-${months[month - 1]}-${year}`;
 }
 const Navbar = () => {
+  
   return (
     <>
       <div className="text-center my-5 space-y-1">
